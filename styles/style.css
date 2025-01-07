@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "Prociono";
+    src: url(../fonts/Prociono-Regular-webfont.woff);
+}
+
+/* @font-face {
+    font-family: "League Gothic";
+    src: url(fonts/LeagueGothic-Regular.woff);
+    font-style: italic;
+} */
+
+* {
+    font-family: "Prociono", sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+body > div {
+    margin: auto;
+    width: 600px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+footer, footer a {
+    color: #888;
+    font-size: 0.8rem;
+    padding: 2rem 0;
+}
+
+img {
+    vertical-align: baseline;
+}
+
+input {
+    border-bottom: 2px solid black;
+    border-left: 0 transparent none;
+    border-right: 0 transparent none;
+    border-top: 0 transparent none;
+}
+
+li {
+    list-style: none;
+}
+
+select {
+    border: 0 none transparent;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #eee;
+}
+
+ul {
+    padding: 0;
+}
+
+.big {
+    font-size: 2rem;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+button.center {
+    margin: 3rem auto;
+}
+
+.d-flex * {
+    flex: 1;
+}
+
+.h-200 {
+    height: 200px;
+    max-height: 200px;
+    min-height: 200px;
+}
+
+.inventory-item {
+    width: 250px;
+}
+
+.set-width {
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    flex: 0 1 300px;
+}
+
+.short {
+    flex: 0 0 3rem;
+    max-width: 3rem;
+    min-width: 3rem;
+    width: 3rem;
+}
+
+.stat {
+    margin: 0 0.5rem;
+}
+
+select.stat {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand.stat {
+    display: none;
+}
+
+.stat-icon {
+    height: 50px;
+    width: 50px;
+    flex: 0 0 50px;
+}
+
+.stat-label {
+    width: 105px;
+    flex: 0 0 105px;
+}
+
+#banner {
+    display: block;
+    margin: 1rem auto 1rem;
+}
+
+#failure-description {
+    margin-left: 2rem;
+    height: 72px;
+    max-height: 72px;
+    min-height: 72px;
+}
+
+#knack-description {
+    margin-left: 2rem;
+    height: 120px;
+    max-height: 120px;
+    min-height: 120px;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.main {
+    margin: auto;
+    width: 7.5in;
+}
+
+.columns {
+    columns: 2;
+}
+
+.columns + .columns {
+    margin-top: 3rem;
+}
+
+.keep-together {
+    display: inline-block;
+    width: 100%;
+}
+
+.not-print {
+    display: auto;
+}
+
+.page + .page {
+    margin-top: 3rem;
+}
+
+.print-only, .print-only.d-block, .print-only.d-flex {
+    display: none !important;
+}
+
+.w-200 {
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+}
+
+@media print {
+    .page {
+        page-break-inside: avoid;
+        page-break-after: always;
+    }
+
+    .not-print {
+        display: none !important;
+    }
+
+    .print-only {
+        display: auto;
+    }
+
+    .print-only.d-block {
+        display: block !important;
+    }
+
+    .print-only.d-flex {
+        display: flex !important;
+    }
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wizard Academy Dropouts</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+    <a href="rules.html">
+        <img id="banner" src="media/dropouts-logo-h-750px.png" alt="Wizard Academy Dropouts">
+    </a>
+    <div>
+        <div class="my-3">
+            <label>
+                <strong>Name</strong><br>
+                <input class="big" id="name"/>
+            </label>
+        </div>
+
+        <div class="my-3">
+            <label>
+                <strong>HP</strong><br>
+                    <input class="short center big" id="hp-field" value="5"/>
+                    <span class="center big"> / <span id="maxHP"> 5 </span> </span>
+            </label>
+        </div>
+
+        <div class="my-3">
+            <label>
+                <strong>Failure:</strong>
+                <select id="failure-select" onchange="updateFailureDescription()">
+                    <option value="" selected disabled hidden></option>
+                    <option id="dropped-out" value="droppedOut">I dropped out.</option>
+                    <option id="kicked-out" value="kickedOut">I was kicked out.</option>
+                    <option id="failed-out" value="failedOut">I failed out.</option>
+                </select>
+            </label>
+            <p id="failure-description"></p>
+        </div>
+
+        <div class="my-3">
+            <label>
+                <strong>Knack:</strong>
+                <select id="knack-select" onchange="updateKnackDescription()">
+                    <option value="" selected disabled hidden></option>
+                    <option id="bardic-option" value="bardic">Bardic</option>
+                    <option id="clairvoyant-option" value="clairvoyant">Clairvoyant</option>
+                    <option id="legacy-option" value="legacy">Legacy</option>
+                    <option id="scrappy-option" value="scrappy">Scrappy</option>
+                    <option id="sturdy-option" value="sturdy">Sturdy</option>
+                    <option id="windborne-option" value="windborne">Windborne</option>
+                </select>
+            </label>
+            <p id="knack-description"></p>
+        </div>
+
+        <div class="d-flex row center">
+            <div class="set-width">
+                <h2>Final Report Card</h2>
+                <p class="d-flex">
+                    <img class="stat-icon" src="media/conjuration.png"/>
+                    <strong class="stat-label center">Conjuration:</strong>
+                    <select class="big short stat center" id="conjuration-field" onchange="onGradeChange(event)">
+                        <option value="" selected disabled hidden></option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <strong class="big short stat center" id="conjuration-bonus"></strong>
+                </p>
+                <p class="d-flex">
+                    <img class="stat-icon" src="media/elementalism.png"/>
+                    <strong class="stat-label center">Elementalism:</strong>
+                    <select class="big short stat center" id="elementalism-field" onchange="onGradeChange(event)">
+                        <option value="" selected disabled hidden></option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <strong class="big short stat center" id="elementalism-bonus"></strong>
+                </p>
+                <p class="d-flex">
+                    <img class="stat-icon" src="media/enchantment.png"/>
+                    <strong class="stat-label center">Enchantment:</strong>
+                    <select class="big short stat center" id="enchantment-field" onchange="onGradeChange(event)">
+                        <option value="" selected disabled hidden></option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <strong class="big short stat center" id="enchantment-bonus"></strong>
+                </p>
+                <p class="d-flex">
+                    <img class="stat-icon" src="media/illusion.png"/>
+                    <strong class="stat-label center">Illusion:</strong>
+                    <select class="big short stat center" id="illusion-field" onchange="onGradeChange(event)">
+                        <option value="" selected disabled hidden></option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <strong class="big short stat center" id="illusion-bonus"></strong>
+                </p>
+                <p class="d-flex">
+                    <img class="stat-icon" src="media/naturalism.png"/>
+                    <strong class="stat-label center">Naturalism:</strong>
+                    <select class="big short stat center" id="naturalism-field" onchange="onGradeChange(event)">
+                        <option value="" selected disabled hidden></option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <strong class="big short stat center" id="naturalism-bonus"></strong>
+                </p>
+                <p class="d-flex">
+                    <img class="stat-icon" src="media/necromancy.png"/>
+                    <strong class="stat-label center">Necromancy:</strong>
+                    <select class="big short stat center" id="necromancy-field" onchange="onGradeChange(event)">
+                        <option value="" selected disabled hidden></option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="F">F</option>
+                    </select>
+                    <strong class="big short stat center" id="necromancy-bonus"></strong>
+                </p>
+            </div>
+            <div class="set-width">
+                <h2>Inventory</h2>
+                <ul id="inventory-list">
+                    <li><input class="inventory-item" value="Hat" onchange="updateInventory()" onkeydown="focusFixer(event)"/></li>
+                    <li><input class="inventory-item" value="Robes" onchange="updateInventory()" onkeydown="focusFixer(event)"/></li>
+                    <li><input class="inventory-item" onchange="updateInventory()" onkeydown="focusFixer(event)"/></li>
+                </ul>
+                <input type="hidden" id="inventory-encoded"/>
+            </div>
+        </div>
+        <button class="center p-2" title="Roll a random character" onclick="randomize()">Random Character</button>
+        <footer>
+            &copy; 2025 <a href="https://carteredge.dev">Carter Edge</a>. All content contained in this document is play test materials and not meant to be accessed by unauthorized persons, shared, duplicated, or redistributed.
+        </footer>
+    </div>
+    <script>
+        const conduit = [
+            "Amulet",
+            "Crystal Ball",
+            "Spell Book",
+            "Staff",
+            "Wand",
+        ];
+        const commonLoot = [
+            "Arcane Energy Drink",
+            "Blank Scroll",
+            "Class Ring of Protection",
+            "Pants of Cargo",
+            "Scroll of Extra Credit",
+            "Wand of Pointing",
+        ];
+        const disciplines = [
+                "conjuration",
+                "elementalism",
+                "enchantment",
+                "illusion",
+                "naturalism",
+                "necromancy"];
+        const firstName1 = ["Ala", "Bergle", "Flora", "Glum", "Jini", "Luna", "Morti", "Umbra"];
+        const firstName2 = ["baster", "by", "gax", "gana", "mer", "nia", "vix", "zar"];
+        const lastName1 = ["Beetle", "Candle", "Crow", "Fizz", "Fox", "Moon", "Rune", "Silver",
+            "Spark", "Toad", "Witch", "Worm"];
+        const lastName2 = ["berry", "feather", "fire", "lock", "moon", "root", "stone", "star",
+            "tooth", "weaver", "wick", "wood"];
+        const failureDescriptions = {
+            droppedOut: "I couldn't focus, and I changed my specialty constantly until my professors couldn't take it anymore. When you make a roll, you can drop the grade for the discipline of that roll by one letter and raise the grade of another discipline by one letter.",
+            failedOut: "I'm so bad at magic, I'm resistant to it. Prevent 1 magical damage each round.",
+            kickedOut: "My spells are extra dangerous. I was kicked out for being a danger to the academy, myself, and everyone around me. My spells do +1 damage.",
+        };
+        const gradeBonuses = {
+            a: "+3",
+            b: "+2",
+            c: "+1",
+            d: "+0",
+            f: "-1",
+        };
+        const knackDescriptions = {
+            bardic: "Outside of combat, you can use double the number of words for a spell if the words are phrased as a rhyming couplet.",
+            clairvoyant: "You can sense the magic around you. You see auras of magic and can feel magic radiating off of items and spells. You get +1 to knowledge rolls for anything you can see or touch.",
+            legacy: "One or both of your parents is a Wizard Academy graduate and a generous donor. You start with one extra item from the common loot table.",
+            scrappy: "When all else fails, you aren't afraid to resort to good, old fashioned fisticuffs. You're stronger than the average wizard, and you can make a physical attack against an enemy as an action, dealing 1 damage to them. The enemy must be within striking damage or you must have something potentially dangerous to throw.",
+            sturdy: "You are remarkably resilient. You have +2 max HP.",
+            windborne: "Whether with wings or an innate affinity for wind, you can fly.",
+        };
+        const startingGrades = ["C", "C", "D", "D", "F", "F"];
+
+        let wasSturdy = false;
+        
+        function addItem(name) {
+            const inventoryList = document.getElementById("inventory-list");
+            const newItem = document.createElement("li");
+            const newInput = document.createElement("input");
+            newInput.onchange = updateInventory;
+            newInput.onkeydown = focusFixer;
+            newInput.value = name;
+            newInput.className = "inventory-item";
+            newItem.appendChild(newInput);
+            inventoryList.appendChild(newItem);
+            return newItem;
+        }
+
+        function clearInventory() {
+            const inventoryList = document.getElementById("inventory-list");
+            while (inventoryList.firstChild)
+                inventoryList.removeChild(inventoryList.lastChild);
+        }
+        
+        function focusFixer(event) {
+            const inventoryList = document.getElementById("inventory-list");
+            const inventoryItems = inventoryList.querySelectorAll("input");
+            
+            if (event.target.value &&
+                (event.key === "Tab" || event.code === "Tab")
+                    && !event.shiftKey
+                    && event.target === inventoryItems[inventoryItems.length - 1]) {
+                event.preventDefault();
+                const newItem = addItem("");
+                newItem.querySelector("input").focus();
+                updateInventory();
+            }
+        }
+
+        function onGradeChange(event) {
+            const discipline = event.target.id.replace("-field", "");
+            updateGrade(discipline);
+        }
+
+        function randomInteger(n, m) {
+            return isNaN(m) ? Math.floor(Math.random() * n) : randomInteger(m - n + 1) + n;
+        }
+
+        function randomElement(list) {
+            return list[Math.floor(list.length * Math.random())];
+        }
+
+        function randomPermutation(list) {
+            const dataOut = [];
+            let indexes = [...Array(list.length)].map((_, i) => i);
+            while (indexes.length) {
+                const idx = randomInteger(indexes.length);
+                dataOut.push(list[indexes.splice(idx, 1)[0]]);
+            }
+            return dataOut;
+        }
+        
+        function randomize() {
+            randomizeWizardName();
+            randomizeFailure();
+            randomizeKnack();
+            randomizeGrades();
+            randomizeInventory();
+        }
+        
+        function randomizeGrades() {
+            const grades = randomPermutation(startingGrades);
+            for (let i = 0; i < disciplines.length ; i++) {
+                const gradeField = document.getElementById(`${disciplines[i]}-field`);
+                gradeField.value = grades[i];
+            }
+            updateAllGrades();
+        }
+
+        function randomizeInventory() {
+            const inventoryList = document.getElementById("inventory-list");
+            clearInventory();
+            addItem("Hat");
+            addItem("Robes");
+            addItem(randomElement(conduit));
+            addItem(randomElement(commonLoot));
+            if (knackValue = document.getElementById("knack-select").value.toLowerCase() === "legacy")
+                addItem(randomElement(commonLoot));
+            updateInventory();
+        }
+
+        function randomizeFailure() {
+            const failureSelect = document.getElementById("failure-select");
+            const failures = [...failureSelect.querySelectorAll("option")].filter(e => !e.disabled).map(e => e.value);
+            failureSelect.value = randomElement(failures);
+            updateFailureDescription();
+        };
+
+        function randomizeKnack() {
+            const knackSelect = document.getElementById("knack-select");
+            const knacks = [...knackSelect.querySelectorAll("option")].filter(e => !e.disabled).map(e => e.value);
+            knackSelect.value = randomElement(knacks);
+            updateKnackDescription();
+        };
+
+        function randomizeWizardName() {
+            const nameField = document.getElementById("name");
+            nameField.value = `${randomElement(firstName1)}${randomElement(firstName2)} ${randomElement(lastName1)}${randomElement(lastName2)}`;
+        }
+
+        function restoreInventory() {
+            const encodedInventoryInput = document.getElementById("inventory-encoded");
+            if (!encodedInventoryInput.value)
+                return;
+            let inventoryItems = JSON.parse(encodedInventoryInput.value);
+            if (Array.isArray(inventoryItems)) {
+                inventoryItems = inventoryItems.map(i => decodeURIComponent(i));
+                clearInventory();
+                const inventoryList = document.getElementById("inventory-list");
+                for (let item of inventoryItems) {
+                    addItem(item);
+                }
+            }
+        }
+
+        function updateFailureDescription() {
+            const failureValue = document.getElementById("failure-select").value;
+            const failureDescriptionElement = document.getElementById("failure-description");
+            failureDescriptionElement.innerText = failureDescriptions[failureValue] ?? "";
+        }
+
+        function updateGrade(discipline) {
+            const gradeField = document.getElementById(`${discipline}-field`);
+            if (gradeField.value)
+                document.getElementById(`${discipline}-bonus`).innerText = gradeBonuses[gradeField.value.toLowerCase()];
+        }
+
+        function updateKnackDescription() {
+            const knackValue = document.getElementById("knack-select").value;
+            const knackDescriptionElement = document.getElementById("knack-description");
+            knackDescriptionElement.innerText = knackDescriptions[knackValue] ?? "";
+            if (knackValue == "sturdy") {
+                document.getElementById("maxHP").innerText = "7";
+                if (!wasSturdy) {
+                    const hpField = document.getElementById("hp-field");
+                    hpField.value = Number(hpField.value) + 2;
+                }
+                wasSturdy = true;
+            } else {
+                document.getElementById("maxHP").innerText = "5";
+                if (wasSturdy) {
+                    const hpField = document.getElementById("hp-field");
+                    hpField.value = Number(hpField.value) - 2;
+                }
+                wasSturdy = false;
+            }
+        }
+
+        function updateAllGrades() {
+            for (let discipline of disciplines) {
+                updateGrade(discipline);
+            }
+        }
+
+        function updateInventory() {
+            const inventoryList = document.getElementById("inventory-list");
+            let inventoryItems = inventoryList.querySelectorAll("li");
+            for (let i = 0; i < inventoryItems.length; i++) {
+                const inventoryInput = inventoryItems[i].querySelector("input");
+                if (i === inventoryItems.length - 1) {
+                    if (inventoryInput.value) {
+                        addItem("");
+                    }
+                } else {
+                    if (!inventoryInput.value)
+                        inventoryList.removeChild(inventoryItems[i]);
+                }
+            }
+            const encodedInventoryInput = document.getElementById("inventory-encoded");
+            inventoryItems = inventoryList.querySelectorAll("input");
+            encodedInventoryInput.value = JSON.stringify([...inventoryItems].map(e => encodeURIComponent(e.value)));
+        }
+
+        window.onload = () => {
+            wasSturdy = document.getElementById("knack-select").value === "sturdy";
+            updateAllGrades();
+            updateFailureDescription();
+            updateKnackDescription();
+            restoreInventory();
+            updateInventory();
+        }
+    </script>
+
+</body>
+</html>

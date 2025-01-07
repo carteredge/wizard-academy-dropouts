@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wizard Academy Dropouts</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="icon" href="favicon.png" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="page">
+            <img alt="Wizard Academy Dropouts" class="center d-block my-5" src="media/dropouts-logo-h-700px.png">
+            <div class="columns">
+                <p>
+                    Conjuring lightning from your fingertips! Summoning skeletons to do your
+                    bidding! Peering through time! These and more are things that you
+                    absolutely sucked at! Alas, you were good enough to make it
+                    <em>into</em> the Wizard Academy, but not good enough to make it
+                    <em>out</em> with your degree in Wizarding.
+                </p>
+                <p>
+                    Wizard Academy Dropouts is a table-top role playing game (TTRPG) for two
+                    or more players, one of which is the Headmaster (or HM) who runs the
+                    game and the rest are the failed wizards (player characters or PCs).
+                    Unlike most TTRPGs, the failed wizards are assumed to be both fairly
+                    smart and fairly weak &mdash; standard nerds. Anything an average person
+                    can do physically, they can also do. Anything that takes an above
+                    average amount of strength or endurance, they automatically fail to do
+                    unless they use magic. Similarly, they have all the wit and
+                    genre-savviness the players can muster, and information about their
+                    environment should be freely given
+                    <em>unless</em> it pertains to magic. Everything else is accomplished
+                    through <strong>casting spells</strong> and
+                    <strong>knowledge rolls</strong> as described below.
+                </p>
+            </div>
+            <img alt="A wizard succeeding at summoning a monster but failing at controlling it - the monster is attacking the wizard."
+                class="center d-block my-4" src="media/doodle1.png">
+        </div>
+        <div class="page">
+            <h2 id="creating-your-character">Creating Your Character</h2>
+            <div class="columns">
+                <h3 id="final-report-card">Final Report Card</h3>
+                <p>
+                    Even a failed wizard had to take a few classes to get where they are.
+                    Your character&#39;s skills in various types of magic are reflected in
+                    the final report card they received before being expelled or dropping
+                    out from the Wizard Academy. Give yourself two <strong>C</strong>s, two
+                    <strong>D</strong>s, and two <strong>F</strong>s in the following
+                    classes in their respective disciplines:
+                </p>
+                <div class="center">
+                    <img alt="A scroll with runes on it that, if you could read runes would read &quot;Final Grade - F&quot;"
+                        class="center pt-4" src="media/doodle7.png">
+                </div>
+            </div>
+            <div class="columns">
+                <div class="keep-together h-200">
+                    <img src="media/conjuration-lg.png">
+                    <h4 id="-conjuration-"><strong>Conjuration</strong></h4>
+                    <p>
+                        Conjuration 101: Creating Something from Nothing &mdash; Conjuration can
+                        magically produce items, simple and complex.
+                    </p>
+                </div>
+                <div class="keep-together h-200">
+                    <img src="media/elementalism-lg.png">
+                    <h4 id="-elementalism-"><strong>Elementalism</strong></h4>
+                    <p>
+                        Elementalism 101: Frost, Fire, Storm, and Stone &mdash; Shield yourself
+                        with stone, freeze your foes, and blast them with fire and lightning.
+                    </p>
+                </div>
+                <div class="keep-together h-200">
+                    <img src="media/enchantment-lg.png">
+                    <h4 id="-enchantment-"><strong>Enchantment</strong></h4>
+                    <p>
+                        Enchantment 101: Enhancement through Enchantment &mdash; Magically
+                        enhance items or boost someone&#39;s physical abilities to supernatural
+                        degrees.
+                    </p>
+                </div>
+                <div class="keep-together h-200">
+                    <img src="media/illusion-lg.png">
+                    <h4 id="-illusion-"><strong>Illusion</strong></h4>
+                    <p>
+                        Illusion 101: Invisibility and Beyond &mdash; Create illusions, command
+                        shadows, or turn things invisible.
+                    </p>
+                </div>
+                <div class="keep-together h-200">
+                    <img src="media/naturalism-lg.png">
+                    <h4 id="-nautralism-"><strong>Nautralism</strong></h4>
+                    <p>
+                        Naturalism 101: Arcane Ecology &mdash; Control plants, summon animals,
+                        and command the weather.
+                    </p>
+                </div>
+                <div class="keep-together h-200">
+                    <img src="media/necromancy-lg.png">
+                    <h4 id="-necromancy-"><strong>Necromancy</strong></h4>
+                    <p>
+                        Necromancy 101: My First Skeletal Minion &mdash; Invoke death magic and
+                        summon undead minions.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <img class="center d-block p-3" src="media/doodle8.png">
+            <div class="columns">
+                <h3 id="failure">Failure</h3>
+                <p>Decide why your wizard is no longer attending the Wizard Academy:</p>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>I dropped out.</strong> I couldn't focus, and I changed my specialty constantly
+                            until my professors couldn't take it anymore. When you make a roll,
+                            you can drop the grade for the discipline of that roll by one letter
+                            and raise the grade of another discipline by one letter.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>I was kicked out.</strong> My spells are extra dangerous. Your spells deal 1
+                            extra damage.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>I failed out.</strong> I&#39;m so bad at magic, I&#39;m resistant to it.
+                            Prevent 1 magical damage each round.
+                        </p>
+                    </li>
+                </ul>
+                <h3 id="knack">Knack</h3>
+                <p>
+                    Choose one of the following traits as your character&#39;s knack (a
+                    thing your character in fact does not suck at):
+                </p>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>Bardic</strong> &ndash; Outside of combat, you can use double the number of
+                            words for a spell if the words are phrased as a rhyming couplet.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Clairvoyant</strong> &ndash; You can sense the magic around you. You see auras
+                            of magic and can feel magic radiating off of items and spells. You get
+                            <strong>+1</strong> to <strong>knowledge rolls</strong> for anything you can see or
+                            touch.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Legacy</strong> &ndash; One or both of your parents is a Wizard Academy
+                            graduate and a generous donor. You start with one extra item from the
+                            <strong>common loot</strong> table.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Scrappy</strong> &ndash; When all else fails, you aren&#39;t afraid to resort
+                            to good, old fashioned fisticuffs. You can make a physical attack
+                            against an enemy as an action, dealing 1 damage to them. The enemy
+                            must be within striking damage or you must have something potentially
+                            dangerous to throw.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Sturdy</strong> &ndash; You are remarkably resilient. You have
+                            <strong>+2 max HP</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Windborne</strong> &ndash; Whether with wings or an innate affinity for wind,
+                            you can fly.
+                        </p>
+                    </li>
+                </ul>
+                <h3 id="inventory">Inventory</h3>
+                <p>At the beginning of the game, each failed wizard has the following:</p>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>Hat</strong> &ndash; A standard-issue wide brimmed, pointy wizard&#39;s hat.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Robes</strong> &ndash; Loose fitting wizard&#39;s robes with long, wide
+                            sleeves.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <strong>Magical Conduit</strong> &ndash; An item a wizard uses to help focus their
+                            power, such as a staff, wand, crystal ball, amulet, or spell book.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            One item from the <strong>common loot</strong> table.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    Everything else a failed wizard may need on their adventurers must be
+                    acquired or <strong>conjured</strong>.
+                </p>
+            </div>
+        </div>
+        <div class="page">
+            <h2 id="playing-the-game">Playing the Game</h2>
+            <div class="columns">
+                <h3 id="taking-turns">Taking Turns</h3>
+                <p>
+                    When the action gets intense enough that it&#39;s both unclear and important whose action goes
+                    first, then it&#39;s time to take turns. Before the first turn, everyone rolls a
+                    <strong>d6</strong>. If a character uses an action on their turn that requires a d6, they use the
+                    result of this first d6. As such, the lowest roll goes first &mdash; someone casting a shorter spell
+                    can blurt it out first. If a PC and an NPC roll the same result, the PC goes first &mdash; one
+                    benefit at being so bad at magic is that they can throw caution to the wind and act hastily. If two PCs roll the
+                    same result, they can decide among themselves which goes first. After the first turn, players keep
+                    the same turn order and don&#39;t have to roll dice in advance.
+                </p>
+                <p>
+                    On your turn, you can move and take one <strong>action</strong>. An
+                    <strong>action</strong> can be <strong>casting a spell</strong>, using an
+                    <strong>item</strong>, or some other activity that you can perform within
+                    a few seconds. You can also make a <strong>knowledge roll</strong> once on
+                    each of your turns without using your action.
+                </p>
+                <h3 id="casting-spells">Casting Spells</h3>
+                <p>
+                    As a failed wizard, you are only good enough to cast simple spells. In
+                    fact, you can only cast spells so simple that they can be described in
+                    only a few words.
+                </p>
+                <p>
+                    To cast a spell, declare what <strong>wizard discipline</strong> you are
+                    drawing from (see below), then roll a d6 then add the penalty or bonus
+                    determined by your grade in that discipline on your final report card. You
+                    describe your spell using a number of words equal to the number you rolled
+                    or fewer. For instance, if you roll a 3, you could invoke a spell to
+                    &quot;summon a key!&quot; or &quot;<strong>heal</strong> me!&quot; but not
+                    &quot;summon key to that door!&quot; The spell then creates the effect you
+                    described, although anything omitted from your description is left to the
+                    Headmaster&#39;s discretion, at which point they should choose the most
+                    hilariously disastrous option possible. If a failed wizard simply invokes
+                    &quot;summon key!&quot; then it may simply summon the answer key to a test
+                    (which may be the very sort of thing that got them expelled from the
+                    Wizard Academy), or if a failed wizard invokes &quot;fire tornado!&quot;
+                    they or one of their allies may end up trapped inside of it.
+                </p>
+                <p>
+                    If the result of your roll minus a penalty is <strong>0 or less</strong>, you still
+                    <em>attempt</em> to cast a spell with a single word, but the HM can be
+                    even less generous than usual in their interpretation of the results,
+                    opting to misinterpret or even ignore the word you gave them.
+                </p>
+                <p>
+                    If you attempt to cast a spell beyond your capabilities, it may produce a
+                    similar but lesser effect. For instance, invoking &quot;Kill that
+                    dragon!&quot; to try to kill a powerful, ancient dragon may simply
+                    <strong>harm</strong> it.
+                </p>
+                <p>
+                    If the HM determines that the spell you wish to cast doesn&#39;t match the
+                    <strong>wizard discipline</strong> you chose to cast it, they can choose
+                    to either penalize you with a worse effect or to reinterpret the spell
+                    into a form that would fit the discipline you chose.
+                </p>
+                <blockquote>
+                    <p>
+                        <strong>Shield</strong><br />When all else fails, you can always cast
+                        &quot;Shield!&quot; This shield reliably <strong>prevents the next 1 damage</strong> you
+                        would take before the start of your next turn.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+        <img class="center d-block not-print p-3" src="media/doodle4.png">
+        <div class="page">
+            <div class="columns">
+                <img class="center d-block p-2" src="media/doodle2.png">
+                <h3 id="wizard-disciplines">Wizard Disciplines</h3>
+                <p>
+                    The eight wizard disciplines are: <strong>Astromancy, Conjuration, Elementalism,
+                    Enchantment, Illusion, Naturalism, Necromancy</strong>, and <strong>Transmogrification</strong>.
+                    Your skill in six of these disciplines are represented as the grades on
+                    your <strong>final report card</strong>. For each of these disciplines,
+                    you have a bonus or penalty based on that grade as listed in the table
+                    below.
+                </p>
+                <p>
+                    You left the academy before you could take any classes from the other two
+                    disciplines, <strong>Astromancy</strong> and <strong>Transmogrification</strong>. Astromancy includes magic
+                    involving space and celestial bodies and is most often used for predicting
+                    the future or teleportation. Transmogrification is the magic of changing
+                    living beings into other forms, such as turning yourself into a giant
+                    spider. Your penalty to spells with these disciplines is always
+                    <strong>-2</strong>.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="text-align: center">Grade</th>
+                            <th style="text-align: center">Bonus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center">A</td>
+                            <td style="text-align: center">+3</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">B</td>
+                            <td style="text-align: center">+2</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">C</td>
+                            <td style="text-align: center">+1</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">D</td>
+                            <td style="text-align: center">+0</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">F</td>
+                            <td style="text-align: center">-1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="keep-together">
+                    <h3 id="reactions-other-spellcasters-and-you">
+                        Reactions: Other Spellcasters and You
+                    </h3>
+                    <p>
+                        When someone else casts a spell, you can use your reaction to try to
+                        assist by channeling your magic into the spell or interfere with a
+                        counterspell. You have one reaction and regain it at the start of your
+                        turn.
+                    </p>
+                </div>
+                <div class="keep-together">
+                    <h4 id="channel">Channel</h4>
+                    <p>
+                        When you channel your magic, roll a d6 and increase the number of words
+                        they can add to that spell by half the result (rounded down).
+                    </p>
+                </div>
+                <div class="keep-together">
+                    <h4 id="counterspell">Counterspell</h4>
+                    <p>
+                        When you counterspell, roll a d6, then choose a number of words equal to
+                        half the result (rounded down) and add those words to the end of that
+                        spell to change its result.
+                    </p>
+                </div>
+                <div class="keep-together">
+                    <h3 id="knowledge-rolls">Knowledge Rolls</h3>
+                    <p>
+                        Knowledge rolls work much like <strong>casting a spell</strong> &mdash;
+                        roll a d6 and adjust by the bonus or penalty of the relevant discipline
+                        &mdash; except instead of choosing words your HM gives you a number of
+                        words equal to the result either about a subject or in answer to a
+                        question.
+                    </p>
+                </div>
+                <div class="keep-together">
+                    <h3 id="health-and-harm">Health and Harm</h3>
+                    <p>
+                        You have 5 Max HP (or 7 if you&#39;re <em>Sturdy</em>). Unless specified
+                        otherwise, each time something harms you, it reduces your HP by 1, and
+                        each time something heals you, it increases your HP by 1. Similarly, if
+                        you cast a spell to harm or heal, you deal 1 damage or heal 1 HP. When you
+                        reach 0 HP, you fall unconscious, and the next damage you take kills you.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img class="center d-block not-print p-3" src="media/doodle9.png">
+        <div class="page">
+            <h2 id="loot">Loot</h2>
+            <h3 id="common-loot">Common Loot</h3>
+            <div class="columns mt-5">
+                <table class="d-inline-block w-200">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center">d8</th>
+                            <th style="text-align: left">Common Item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center">1</td>
+                            <td style="text-align: left">Blank scroll</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">2</td>
+                            <td style="text-align: left">Class ring of protection</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">3</td>
+                            <td style="text-align: left">Diet Elixir</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">4</td>
+                            <td style="text-align: left">Pants of cargo</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">5</td>
+                            <td style="text-align: left">Scroll of extra credit</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center">6</td>
+                            <td style="text-align: left">Wand of pointing</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="keep-together">
+                    <h4 id="-blank-scroll-"><strong>Blank scroll</strong></h4>
+                    <p>
+                        A blank scroll suitable for recording a spell to be cast later, probably
+                        leftover from a homework assignment you never did. Writing a spell on a
+                        blank scroll takes 10 minutes. Roll twice for the spell and take the
+                        highest value, adjust with your bonus and penalty as usual, then record
+                        the desired words for the spell on the scroll. Casting the spell takes one
+                        action and destroys the scroll.
+                    </p>
+                </div>
+                <div class="keep-together">
+                    <h4 id="-class-ring-of-protection-">
+                        <strong>Class ring of protection</strong>
+                    </h4>
+                    <p>
+                        This ring prevents the first 1 damage you would take. It recharges after
+                        you go 1 turn without taking damage.
+                    </p>
+                    <img class="center d-block" src="media/class-ring.png" />
+                </div>
+                <div class="keep-together">
+                    <img class="center d-block print-only" src="media/diet-elixir.png" />
+                    <h4><strong>Diet Elixir</strong></h4>
+                    <p>
+                        All of the healing, none of the calories. You can drink this drink as an
+                        action to recover 3 HP, or you can shotgun the drink, requiring no action
+                        but only restoring 1 HP.
+                    </p>
+                    <img class="center d-block not-print" src="media/diet-elixir.png" />
+                </div>
+                <div class="keep-together">
+                    <h4 id="-pants-of-cargo-"><strong>Pants of cargo</strong></h4>
+                    <p>
+                        These pants can store up to 1000 lbs. and 100 ft. by 100 ft. of stuff in a
+                        magical space within its many pockets, but the pants and all its contents
+                        always only weigh 1 lb. You can retrieve anything stored in a pocket by
+                        asking for it aloud then either grabbing it or dumping it out.
+                    </p>
+                    <img class="center d-block" src="media/cargo-pants.png" />
+                </div>
+                <div class="keep-together">
+                    <h4 id="-scroll-of-extra-credit-">
+                        <strong>Scroll of extra credit</strong>
+                    </h4>
+                    <p>
+                        When you use this scroll, requiring no action, it increases your bonus for
+                        a discipline by 1 until after the next time you cast a spell,
+                        counterspell, or make a knowledge check for that discipline.
+                    </p>
+                </div>
+                <div class="keep-together">
+                    <h4 id="-wand-of-pointing-"><strong>Wand of pointing</strong></h4>
+                    <p>
+                        You can use this wand to point at the target of a spell in place of using
+                        the precious few words you have to cast the spell. It&#39;s also handy
+                        during slideshow presentations.
+                    </p>
+                    <img class="center d-block" src="media/pointing-wand.png" />
+                </div>
+            </div>
+            <img class="center d-block my-5" src="media/doodle3.png">
+        </div>
+        <h3 id="uncommon-loot">Uncommon Loot</h3>
+        <div class="columns">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align: center">d4</th>
+                        <th style="text-align: left">Uncommon Item</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center">1</td>
+                        <td style="text-align: left">Arcane eraser</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">2</td>
+                        <td style="text-align: left">Cap of the tutor</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">3</td>
+                        <td style="text-align: left">Kit of first aid</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center">4</td>
+                        <td style="text-align: left">Scroll: Hall of passage</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img class="center d-block" src="media/doodle5.png">
+        </div>
+        <div class="columns mt-5">
+            <div class="keep-together">
+                <h4 id="-arcane-eraser-"><strong>Arcane eraser</strong></h4>
+                <p>
+                    This magic eraser has 1d4 charges. You can spend 1 charge to counterspell
+                    without using a reaction. Alternatively, you can spend 1 charge to destroy
+                    a scroll and, if it is being cast, prevent its effects. This second use
+                    does not work on scrolls written with the
+                    <strong>marker of permanence</strong>.
+                </p>
+            </div>
+            <div class="keep-together">
+                <h4 id="-cap-of-the-tutor-"><strong>Cap of the tutor</strong></h4>
+                <p>
+                    You can use your reaction to give someone who can hear you your discipline
+                    bonus for a single spell, counterspell, or knowledge check.
+                </p>
+                <img class="center d-block" src="media/tutor-cap.png" />
+            </div>
+            <div class="keep-together">
+                <h4 id="-kit-of-first-aid-"><strong>Kit of first aid</strong></h4>
+                <p>This kit heals a wizard fully. Using it takes 10 minutes.</p>
+            </div>
+            <div class="keep-together">
+                <h4 id="-scroll-hall-of-passage-">
+                    <strong>Scroll: Hall of passage</strong>
+                </h4>
+                <p>
+                    When used, this scroll creates a magic doorway to a room of your choice in
+                    the academy (except rooms where students are not allowed). Additionally,
+                    when presented to a hall monitor, this scroll prevents them from becoming
+                    hostile.
+                </p>
+            </div>
+        </div>
+        <footer>
+            &copy; 2025 <a href="https://carteredge.dev">Carter Edge</a>. All content contained in this document is play test materials and not meant to be accessed by unauthorized persons, shared, duplicated, or redistributed.
+        </footer>
+    </div>
+</body>
+
+</html>
